@@ -17,12 +17,15 @@ function splitSentence(string) {
   let split = string.split(" ")
   return split
 }
-console.log(splitSentence('go trybe'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastItem = array[array.length - 1]
+  let firstItem = array[0]
+  let res =`${lastItem}, ${firstItem}`
+  return res;
 }
+console.log (concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
