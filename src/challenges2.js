@@ -1,8 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(array, name) {
+  let arrayTech = [];
+  array.sort();
 
+  if (array.length === 0) {
+    return 'Vazio!'
+  }
+
+  for (let tech of array) {
+    arrayTech.push({
+      tech,
+      name
+    });
+  }
+  return arrayTech
+}
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -21,6 +33,6 @@ function hydrate() {
 module.exports = {
   generatePhoneNumber,
   techList,
-  hydrate,
   triangleCheck,
+  hydrate
 };
