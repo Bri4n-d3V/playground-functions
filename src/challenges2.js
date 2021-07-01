@@ -28,9 +28,9 @@ function generatePhoneNumber(arr) {
   for (var i = 0; i < arr.length; i += 1) {
     let counter = 0;
     for (var j = 0; j < arr.length; j += 1) {
-        if (arr[j] === arr[i]) {
-          counter += 1
-        }
+      if (arr[j] === arr[i]) {
+        counter += 1
+      }
     }
     if (counter >= 3) {
       return "não é possível gerar um número de telefone com esses valores";
@@ -54,9 +54,28 @@ function generatePhoneNumber(arr) {
   return `${ddd} ${primeirosNumeros}${ultimosNumeros}`;
 }
 console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let a;
+  let b;
+  let c;
+
+  if (lineA < (lineB + lineC) && lineA > (Math.abs(lineB - lineC))) {
+    a = true;
+  }
+  if (lineB < (lineA + lineC) && lineB > (Math.abs(lineA - lineC))) {
+    b = true;
+  }
+  if (lineC < (lineA + lineB) && lineC > (Math.abs(lineA - lineB))) {
+    c = true;
+  }
+
+  if (a === true && b === true && c === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
