@@ -53,7 +53,6 @@ function generatePhoneNumber(arr) {
   primeirosNumeros = primeirosNumeros + "-";
   return `${ddd} ${primeirosNumeros}${ultimosNumeros}`;
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -79,8 +78,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let reg = /\d+/g;
+  let result = string.match(reg);
+
+  let soma = 0;
+  for (let i in result) {
+    soma = soma + parseInt(result[i])
+  }
+
+  let copo = "";
+  if (soma === 1) {
+    copo = "copo de água"
+  } else {
+    copo = "copos de água"
+  }
+
+  return `${soma} ${copo}`;
 }
 
 module.exports = {
